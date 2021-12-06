@@ -1,0 +1,22 @@
+package as3;
+
+public class ElectronicItemFactory  {
+	private static ElectronicItemFactory Item;
+	 
+	   
+	  ElectronicItemFactory(){}
+	 
+	   public ElectronicItemFactory getItem(int ID, String Name, int Price){
+		   if (Item == null) {  
+			   Item = new ElectronicItemFactory();  
+		    }  
+		    return new ElectronicItemFactory();
+		    }
+
+
+
+	   
+
+	 
+}
+

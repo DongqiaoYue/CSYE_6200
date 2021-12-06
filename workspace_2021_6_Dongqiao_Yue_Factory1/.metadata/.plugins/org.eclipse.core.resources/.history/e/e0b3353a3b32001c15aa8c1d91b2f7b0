@@ -1,0 +1,19 @@
+package as2;
+
+public class Teacher extends Person{
+
+	private int hourlyWage;
+	
+	public Teacher(int ID, int Age, String FirstName, String LastName, String ParentFirstName, String ParentLastName, int hourlyWage) {
+		super(ID, Age, FirstName, LastName, ParentFirstName, ParentLastName);	
+		this.hourlyWage = hourlyWage;
+	}
+	
+	public int gethourlyWage() {
+		return hourlyWage;
+	}
+	
+	public void sethourlyWage(int hourlyWage) {
+		this.hourlyWage = hourlyWage;
+	}
+}

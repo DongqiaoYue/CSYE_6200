@@ -1,0 +1,13 @@
+package as3;
+
+//shi ti lei
+public class FoodItem implements Item{
+
+	@Override
+	public void Send() {
+		System.out.println("Inside Circle::draw() method.");
+	}
+	
+	
+
+}

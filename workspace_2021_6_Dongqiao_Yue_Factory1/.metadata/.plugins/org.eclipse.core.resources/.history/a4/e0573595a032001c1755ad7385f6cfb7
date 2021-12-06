@@ -1,0 +1,24 @@
+package as3;
+
+public class ElectronicItemFactory implements as3.Item {
+	private static ElectronicItemFactory Item;
+	 
+	   
+	  ElectronicItemFactory(){}
+	 
+	   public ElectronicItemFactory getItem(int ID, String Name, int Price){
+		   if (Item == null) {  
+			   Item = new ElectronicItemFactory();  
+		    }  
+		    return Item;  
+		    }
+
+	public void Send() {
+		// TODO Auto-generated method stub
+		
+	}  
+	   
+
+	 
+}
+

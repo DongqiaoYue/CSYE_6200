@@ -1,0 +1,29 @@
+package as2;
+
+public class Student extends Person{
+	
+	private int StudentID;
+	private double Gpa;
+	
+	public Student(int ID, int Age, String FirstName, String LastName, String ParentFirstName, String ParentLastName, int StudentID, double Gpa) {
+		super(ID, Age, FirstName, LastName, ParentFirstName, ParentLastName);	
+		this.Gpa = Gpa;
+		this.StudentID = StudentID;
+	}
+
+	public double getGpa() {
+		return Gpa;
+	}
+	
+	public void setGpa(double Gpa) {
+		this.Gpa = Gpa;
+	}
+	
+	public int getStudentID() {
+		return StudentID;
+	}
+	
+	public void setStudentID(int StudentID) {
+		this.StudentID = StudentID;
+	}
+}

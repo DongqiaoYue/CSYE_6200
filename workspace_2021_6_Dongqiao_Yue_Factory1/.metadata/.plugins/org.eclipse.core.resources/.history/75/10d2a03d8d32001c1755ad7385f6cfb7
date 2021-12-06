@@ -1,0 +1,36 @@
+package as3;
+
+public class FoodItem implements Item{
+	
+	private int ID;
+	private String Name;
+	private int Price;
+
+	public FoodItem(int ID, String Name, int Price) {
+		this.ID = ID;
+		this.Name = Name;
+		this.Price = Price;
+
+	}
+	
+
+	public int getID() {
+		return ID;
+	}
+	
+	public String getName() {
+		return Name;
+	}
+	
+	public int getPrice() {
+		return Price;
+	}
+	
+	@Override
+	public void Send() {
+		
+	}
+	
+	
+
+}

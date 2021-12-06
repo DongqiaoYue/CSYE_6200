@@ -1,0 +1,11 @@
+package as3;
+
+public class ElectronicItem implements Item{
+
+	@Override
+	public void Send() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package as3;
+
+public class FoodItemFactory {
+	
+	public Item getSend(String shapeType) {
+		if(shapeType == null) {
+			return null;
+		}
+	     if(shapeType.equalsIgnoreCase("Apple")){
+	         return new FoodItem(0, shapeType, 0);
+	      } 
+	     if(shapeType.equalsIgnoreCase("Pear")){
+	         return new FoodItem(0, shapeType, 0);
+	      } 
+	     if(shapeType.equalsIgnoreCase("KiWi")){
+	         return new FoodItem(0, shapeType, 0);
+	      } 
+	      return null;
+	   }
+	
+	
+}

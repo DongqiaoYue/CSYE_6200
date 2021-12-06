@@ -1,0 +1,35 @@
+package as3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FoodItem implements Item{
+
+		@Override
+		public void Send() {
+			System.out.println("This is food");
+		}
+		
+
+		
+		public static void demo() {
+			
+			try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\78688\\eclipse-workspace-202109_Guanchi_Li_csv1\\project\\src\\as3\\FoodItemCSV.txt"))) {
+
+				String inputLine = null;
+				while ((inputLine = br.readLine()) != null) {
+					String[] fields = inputLine.split(",");
+					int ID = new Integer(fields[0]);
+					String Name = fields[1];
+					int Price = new Integer(fields[2]);
+				}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		
+			FoodItemFactory food1 = new FoodItemFactory();
+			Item item1 = food1.produce("mail");
+			item1.Send();
+}
+}

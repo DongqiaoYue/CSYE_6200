@@ -1,0 +1,21 @@
+package as3;
+
+public class FoodItemFactory {
+	enum FoodCriteria{
+		APPLE,
+		BANANA,
+		PEAR,
+		WATERMELON,
+		WIKI
+	}
+	
+	public FoodItem getObject(FoodCriteria criteria) {
+		if (criteria == APPLE) {
+			return new Apple();
+		} else {
+			return new BANANA();
+		}
+	   }
+
+	
+}

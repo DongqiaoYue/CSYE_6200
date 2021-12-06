@@ -1,0 +1,66 @@
+package as3;
+
+public class Person{
+	private int ID;
+	private int Age;
+	private String FirstName;	
+	private String LastName;
+	private String ParentFirstName;
+	private String ParentLastName;
+	
+	public Person(int ID, int Age, String FirstName, String LastName, String ParentFirstName, String ParentLastName) {
+		this.ID = ID;
+		this.Age = Age;
+		this.FirstName = FirstName;
+		this.LastName = LastName;
+		this.ParentFirstName = ParentFirstName;
+		this.ParentLastName = ParentLastName;
+	}
+	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int ID) {
+		this.ID = ID;
+	}
+	
+	public int getAge() {
+		return Age;
+	}
+	
+	public void setAge(int Age) {
+		this.Age = Age;
+	}
+	
+	public String getFirstName() {
+		return FirstName;
+	}
+	
+	public void setFirstName(String FirstName) {
+		this.FirstName = FirstName;
+	}
+	
+	public String getLastName() {
+		return LastName;
+	}
+	
+	public void setLastName(String LastName) {
+		this.LastName = LastName;
+	}
+	
+	public String ParentFirstName() {
+		return ParentFirstName;
+	}
+	
+	public void ParentFirstName(String ParentFirstName) {
+		this.ParentFirstName = ParentFirstName;
+	}
+	
+	public String ParentLastName() {
+		return LastName;
+	}
+	
+	public void ParentLastName(String ParentLastName) {
+		this.ParentLastName = ParentLastName;
+	}
+}

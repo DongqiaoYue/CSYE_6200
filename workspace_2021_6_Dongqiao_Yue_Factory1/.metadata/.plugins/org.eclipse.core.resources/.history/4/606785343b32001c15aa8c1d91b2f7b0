@@ -1,0 +1,9 @@
+package as2;
+
+import as2.FileUtil;
+
+public class Driver {
+	public static void main(String[] args) {
+		FileUtil.demo();	
+	}
+}

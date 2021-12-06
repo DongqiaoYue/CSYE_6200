@@ -1,0 +1,48 @@
+package as3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FoodItem implements Item{
+
+		@Override
+		public void Send() {
+			System.out.println("This is food");
+		}
+		
+		public static void main(String[] args) {
+			FoodItemFactory food1 = new FoodItemFactory();
+			Item item1 = food1.produce("mail");
+			item1.Send();
+		}
+		
+		public static void demo() {
+			
+			try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\78688\\eclipse-workspace-202109_Guanchi_Li_csv1\\project\\src\\as3\\FoodItemCSV.txt"))) {
+
+				String inputLine = null;
+			
+				while ((inputLine = br.readLine()) != null) {
+					String[] fields = inputLine.split(",");
+					int ID = new Integer(fields[0]);
+					int Age = new Integer(fields[1]);
+					
+					String FirstName = fields[2];
+					String LastName = fields[3];
+					
+					String ParentFirstName = fields[4];
+					String ParentLastName = fields[5];
+					
+					int StudentID = new Integer(fields[6]);
+					int hourlyWage = new Integer(fields[6]);
+	
+					
+				}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		
+		
+}
+}

@@ -1,0 +1,14 @@
+package as3;
+
+public class FoodItemFactory {
+	
+	public Item produce(String type) {
+		if("mail".equals(type)) {
+			return new FoodItem();
+		}else {
+			System.out.println("Wrong");
+			return null;
+		}
+	}
+	
+}

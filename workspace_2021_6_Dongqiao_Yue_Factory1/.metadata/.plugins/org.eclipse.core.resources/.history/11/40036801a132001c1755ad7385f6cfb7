@@ -1,0 +1,75 @@
+package as3;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FoodItemFactoryDemo {
+	
+	static List<FoodItem> FoodItem = new ArrayList<FoodItem>();
+	static List<ElectronicItem> ElectronicItem = new ArrayList<ElectronicItem>();
+	
+	public static void main(String[] args) {
+		FoodItemFactory FoodFactory = new FoodItemFactory();
+		ElectronicItemFactory ElectronicFactory = new ElectronicItemFactory();
+		
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\78688\\eclipse-workspace-202109_Guanchi_Li_csv1\\project\\src\\as3\\FoodItemCSV.txt"));
+			String inputLine = null;
+			
+			while ((inputLine = br.readLine()) != null) {
+				String[] fields = inputLine.split(",");
+				int ID = new Integer(fields[0]);
+				String Name = fields[1];
+				int Price = new Integer(fields[2]);
+
+				// instantiate Student object from line in file and add to list
+				
+				
+				FoodItem.add(new FoodItem (ID, Name, Price));
+				
+				 Item shape = FoodFactory.getSend(ID, Name, Price);
+			      shape.Send();
+			}
+			
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		  
+	
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\78688\\eclipse-workspace-202109_Guanchi_Li_csv1\\project\\src\\as3\\ElectronicItemCSV.txt"));
+			String inputLine = null;
+			
+			while ((inputLine = br.readLine()) != null) {
+				String[] fields = inputLine.split(",");
+				int ID = new Integer(fields[0]);
+				String Name = fields[1];
+				int Price = new Integer(fields[2]);
+
+				// instantiate Student object from line in file and add to list
+				
+				
+				ElectronicItem.add(new ElectronicItem (ID, Name, Price));
+				String shape = ElectronicFactory.getItem(ID, Name, Price);
+				System.out.println(shape);
+				
+			}
+			
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	   }
+}

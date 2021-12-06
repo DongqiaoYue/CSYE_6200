@@ -1,0 +1,12 @@
+package as3;
+
+public class ServiceItemFactory {
+	   private static ServiceItemFactory Item = new ServiceItemFactory();  
+	    ServiceItemFactory (){}  
+	    
+	    public static ServiceItemFactory getItem(int ID, String Name, int Price) {  
+	    return Item;
+	    }
+	    
+
+}

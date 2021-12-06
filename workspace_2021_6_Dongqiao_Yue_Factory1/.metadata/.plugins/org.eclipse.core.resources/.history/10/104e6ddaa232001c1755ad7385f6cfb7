@@ -1,0 +1,22 @@
+package as3;
+
+public class FoodItemFactory {
+	
+	public Item getSend(int ID, String Name, int price) {
+		if(Name == null) {
+			return null;
+		}
+	     if(Name.equalsIgnoreCase("Apple")){
+	         return new FoodItem(ID, Name, price);
+	      } 
+	     if(Name.equalsIgnoreCase("Pear")){
+	         return new FoodItem(ID, Name, price);
+	      } 
+	     if(Name.equalsIgnoreCase("KiWi")){
+	         return new FoodItem(ID, Name, price);
+	      } 
+	      return null;
+	   }
+	
+	
+}

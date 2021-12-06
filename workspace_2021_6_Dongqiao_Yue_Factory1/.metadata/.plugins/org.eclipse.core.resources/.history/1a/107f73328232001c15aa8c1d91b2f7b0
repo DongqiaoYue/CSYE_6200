@@ -1,0 +1,10 @@
+package as3;
+
+public interface Item {
+	
+	
+	
+	public void Send();
+
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\78688\eclipse-workspace-202109_Guanchi_Li_Factory1\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3581163120.index
+2961087483.index

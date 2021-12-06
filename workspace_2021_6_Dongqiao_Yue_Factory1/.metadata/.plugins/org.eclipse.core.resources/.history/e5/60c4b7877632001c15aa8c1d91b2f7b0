@@ -1,0 +1,15 @@
+package as3;
+
+public class FoodItem implements Item{
+
+		@Override
+		public void Send() {
+			System.out.println("This is food");
+		}
+		
+		public static void main(String[] args) {
+			FoodItemFactory food1 = new FoodItemFactory();
+			Item item1 = food1.produce("mail");
+			item1.Send();
+		}
+}

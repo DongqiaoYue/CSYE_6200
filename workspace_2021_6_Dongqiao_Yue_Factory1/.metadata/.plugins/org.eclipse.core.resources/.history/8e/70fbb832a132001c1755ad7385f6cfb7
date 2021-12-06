@@ -1,0 +1,11 @@
+package as3;
+
+public class ServiceItem implements Item{
+
+	@Override
+	public void Send() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

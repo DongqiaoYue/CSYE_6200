@@ -1,0 +1,140 @@
+package as3;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+//01.16.08 how to spilt
+public class FileUtil1 {
+
+	 static List<Student>students = new ArrayList<Student>();
+	 static List<Teacher>teacher = new ArrayList<Teacher>();
+
+	public static void demo() {
+		
+		try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\78688\\eclipse-workspace-202109_Guanchi_Li_csv1\\project\\src\\as3\\student.txt"))) {
+
+			String inputLine = null;
+		
+			int i = 0;
+			while ((inputLine = br.readLine()) != null) {
+				String[] fields = inputLine.split(",");
+				int ID = new Integer(fields[0]);
+				int Age = new Integer(fields[1]);
+				
+				String FirstName = fields[2];
+				String LastName = fields[3];
+				
+				String ParentFirstName = fields[4];
+				String ParentLastName = fields[5];
+				
+				int StudentID = new Integer(fields[6]);
+				int hourlyWage = new Integer(fields[6]);
+				if(i<4) {
+				double GPA = new Double(fields[7]);
+				// instantiate Student object from line in file and add to list
+				students.add(new Student (ID, Age, FirstName, LastName, ParentFirstName, ParentLastName, StudentID, GPA));
+				System.out.println("Student: " + FirstName + " " + LastName + " ID: " + ID + " Age: " + Age + " StudentID: " + StudentID + " GPA: " + GPA);
+				i++;
+				}
+				else {
+					teacher.add(new Teacher (ID, Age, FirstName, LastName, ParentFirstName, ParentLastName, hourlyWage ));
+					System.out.println("Teacher: " + FirstName + " " + LastName + " ID: " + ID + " Age: " + Age + " hourlyWage: " + hourlyWage +"$/hour" );
+				}
+				
+			}
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		//Student: Aster Wang ID: 64152 Age: 21 StudentID: 910001 GPA: 4.0
+		//Student: Billy Pan ID: 84756 Age: 22 StudentID: 910003 GPA: 3.4
+		//Student: Atilr Mao ID: 45314 Age: 27 StudentID: 910002 GPA: 3.7
+		//Student: Franklin Chai ID: 84621 Age: 18 StudentID: 910004 GPA: 3.3
+		//Teacher: Guanchi Li ID: 90001 Age: 31 hourlyWage: 40$/hour
+		
+
+		Collections.sort(students, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				return o1.getID() - o2.getID();
+			}
+			
+		});
+		System.out.println(" ");
+		System.out.println("Sort by ID: ");
+			for (Student student : students) {
+				System.out.println("Student: " + student.getFirstName() + " " + student.getLastName() + 
+						" ID: " + student.getID() + " Age: " + student.getAge() + " StudentID: " + student.getStudentID() + " GPA: " + student.getGpa());
+				  	
+			}
+		
+		Collections.sort(students, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				return o1.getStudentID() - o2.getStudentID();
+			}
+				
+		});
+		System.out.println(" ");
+		System.out.println("Sort by StudentID: ");
+			for (Student student : students) {
+				System.out.println("Student: " + student.getFirstName() + " " + student.getLastName() + 
+						" ID: " + student.getID() + " Age: " + student.getAge() + " StudentID: " + student.getStudentID() + " GPA: " + student.getGpa());
+				  	
+			}
+		Collections.sort(students, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				return o1.getLastName().compareTo(o2.getLastName()) ;
+			}
+					
+		});
+		System.out.println(" ");
+		System.out.println("Sort by LastName: ");
+			for (Student student : students) {
+				System.out.println("Student: " + student.getFirstName() + " " + student.getLastName() + 
+						" ID: " + student.getID() + " Age: " + student.getAge() + " StudentID: " + student.getStudentID() + " GPA: " + student.getGpa());
+				  	
+			}
+		Collections.sort(students, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				return o1.getFirstName().compareTo(o2.getFirstName()) ;
+			}
+						
+		});
+		System.out.println(" ");
+		System.out.println("Sort by FirstName: ");
+			for (Student student : students) {
+				System.out.println("Student: " + student.getFirstName() + " " + student.getLastName() + 
+						" ID: " + student.getID() + " Age: " + student.getAge() + " StudentID: " + student.getStudentID() + " GPA: " + student.getGpa());
+				  	
+			}
+		
+		Collections.sort(students, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				return new Double(o1.getGpa()).compareTo (new Double(o2.getGpa()));
+			}
+							
+		});
+		System.out.println(" ");
+		System.out.println("Sort by GPA: ");
+			for (Student student : students) {
+				System.out.println("Student: " + student.getFirstName() + " " + student.getLastName() + 
+						" ID: " + student.getID() + " Age: " + student.getAge() + " StudentID: " + student.getStudentID() + " GPA: " + student.getGpa());
+					  	
+			}
+	}
+}

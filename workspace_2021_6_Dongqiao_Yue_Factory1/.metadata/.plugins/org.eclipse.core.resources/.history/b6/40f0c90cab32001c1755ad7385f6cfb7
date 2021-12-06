@@ -1,0 +1,23 @@
+package as3;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AbstractStore {
+	private List<FoodItemFactory> Food;
+	private List<ElectronicItemFactory> Electronic;
+	private List<ServiceItemFactory> Service;
+		
+	{
+		Food = new ArrayList<FoodItemFactory>();
+		Electronic= new ArrayList<ElectronicItemFactory>();
+		Service = new ArrayList<ServiceItemFactory>();
+	}
+	
+	private void food1() {
+		System.out.println(Food.size() + " fooditems in model.");
+		for(FoodItemFactory fooditem: Food) {
+			fooditem.toString();
+		}
+	}
+}

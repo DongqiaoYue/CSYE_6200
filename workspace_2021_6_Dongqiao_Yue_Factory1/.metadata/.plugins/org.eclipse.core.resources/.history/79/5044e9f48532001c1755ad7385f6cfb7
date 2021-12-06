@@ -1,0 +1,33 @@
+package as3;
+
+//shi ti lei
+public class FoodItem implements Item{
+	
+	private int ID;
+	private String Name;
+	private int Price;
+
+	public FoodItem(int iD, String name, int price) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int getID() {
+		return ID;
+	}
+	
+	public String getName() {
+		return Name;
+	}
+	
+	public int getPrice() {
+		return Price;
+	}
+	
+	@Override
+	public void Send() {
+		System.out.println("Inside Circle::draw() method.");
+	}
+	
+	
+
+}

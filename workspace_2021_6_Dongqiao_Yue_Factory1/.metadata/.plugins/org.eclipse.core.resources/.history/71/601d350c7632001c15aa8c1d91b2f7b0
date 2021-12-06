@@ -1,0 +1,10 @@
+package as3;
+
+public class FoodItem implements Item{
+
+		@Override
+		public void Send() {
+			System.out.println("This is food");
+		}
+
+}
