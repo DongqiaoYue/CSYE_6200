@@ -35,7 +35,12 @@ public class Groups {
                 DefaultTableModel model = (DefaultTableModel) groups.getModel();    //获得表格模型
                 int selectedRow = groups.getSelectedRow();
                 int selectedColumn = groups.getSelectedColumn();
-                int group = (int)groups.getValueAt(selectedRow, selectedColumn);
+//                int group = (int)groups.getValueAt(selectedRow, selectedColumn);
+
+                JFrame frame = Groups.getFrame();
+                StudentList stuLst = StudentList.getForm();
+                frame.dispose();
+                stuLst.init();
             }
         });
     }

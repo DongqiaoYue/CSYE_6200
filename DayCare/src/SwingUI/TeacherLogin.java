@@ -42,8 +42,8 @@ public class TeacherLogin {
                 if (!username.isEmpty() && !password.isEmpty()) {
                     JFrame frame = TeacherLogin.getFrame();
                     frame.dispose();
-                    StudentForm studentForm = StudentForm.getForm();
-                    studentForm.init();
+                    TeacherForm teacherForm = TeacherForm.getForm();
+                    teacherForm.init();
                 } else {
                     Object[] options = { "OK" };
                     JOptionPane.showOptionDialog(null, "Click OK to continue", "Password check failed.",

@@ -36,7 +36,7 @@ public class MainForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = MainForm.getFrame();
-                StudentLogin loginForm = StudentLogin.getForm();
+                TeacherLogin loginForm = TeacherLogin.getForm();
                 frame.dispose();
                 loginForm.init();
             }

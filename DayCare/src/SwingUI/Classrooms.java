@@ -35,7 +35,12 @@ public class Classrooms {
                 DefaultTableModel model = (DefaultTableModel) classroom.getModel();    //获得表格模型
                 int selectedRow = classroom.getSelectedRow();
                 int selectedColumn = classroom.getSelectedColumn();
-                int group = (int)classroom.getValueAt(selectedRow, selectedColumn);
+//                int group = (int)classroom.getValueAt(selectedRow, selectedColumn);
+
+                JFrame frame = Classrooms.getFrame();
+                Groups groups = Groups.getForm();
+                frame.dispose();
+                groups.init();
             }
         });
     }
