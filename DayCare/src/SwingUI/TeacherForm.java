@@ -7,4 +7,6 @@ public class TeacherForm {
     private JTextArea textArea1;
     private JTextArea textArea2;
     private JButton button1;
+
+
 }

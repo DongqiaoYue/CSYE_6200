@@ -27,7 +27,7 @@ public class MainForm {
             public void actionPerformed(ActionEvent e) {
 //                JOptionPane.showMessageDialog(null, "Hello World!");
                 JFrame frame = MainForm.getFrame();
-                LoginForm loginForm = LoginForm.getForm();
+                StudentLogin loginForm = StudentLogin.getForm();
                 frame.dispose();
                 loginForm.init();
             }
@@ -35,7 +35,10 @@ public class MainForm {
         teacherLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = MainForm.getFrame();
+                StudentLogin loginForm = StudentLogin.getForm();
+                frame.dispose();
+                loginForm.init();
             }
         });
     }
