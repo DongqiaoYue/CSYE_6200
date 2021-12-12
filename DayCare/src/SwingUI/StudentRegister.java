@@ -10,6 +10,18 @@ public class StudentRegister {
     private JButton backButton;
     private JButton submit;
     private JPanel registerPanel;
+    private JTextField age;
+    private JTextField family;
+    private JTextField address;
+    private JTextField phone;
+    private JTextField classroom;
+    private JTextField group;
+    private JTextField hib;
+    private JTextField dtap;
+    private JTextField polio;
+    private JTextField hepatitis;
+    private JTextField mmr;
+    private JTextField varicella;
 
     private static JFrame frame = new JFrame("Student Register Page");
     private static StudentRegister registerForm = new StudentRegister();
@@ -38,6 +50,19 @@ public class StudentRegister {
             public void actionPerformed(ActionEvent e) {
                 String username = userName.getText().trim();
                 String password = String.valueOf(passwords.getPassword());
+                String Age = age.getText().trim();
+                String Family = family.getText().trim();
+                String Address = address.getText().trim();
+                String Phone = phone.getText().trim();
+                String classRoom = classroom.getText().trim();
+                String Group = group.getText().trim();
+                String Hib = hib.getText().trim();
+                String Dtap = dtap.getText().trim();
+                String Polio = polio.getText().trim();
+                String Hepatitis = hepatitis.getText().trim();
+                String Mmr = mmr.getText().trim();
+                String Varicella = varicella.getText().trim();
+
             }
         });
     }
